@@ -1,1 +1,9 @@
-New Author
+<% if(locals.error_message != null){ %>
+    <h1><%= locals.error_message %></h1>
+<% } %>
+
+<form action="/authors" method="post">
+    <input type="text" name="f_name" placeholder="author name">
+    <input type="submit" value="create">
+    <a href="/authors">Cancel</a>
+</form>
